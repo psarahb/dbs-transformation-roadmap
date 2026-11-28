@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DBS Transformation Roadmap · Crawl/Walk/Run</title>
+<style>
+:root{--ink:#1d2330;--muted:#596273;--line:#dfe3ea;--page:#f6f7f9;--paper:#fff;--accent:#7a1f2b;
+--crawl:#e7eef8;--crawl-ink:#1f4a7a;--walk:#e8f3ec;--walk-ink:#1f6a43;--run:#f7ece6;--run-ink:#8a3d12}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:1rem/1.55 system-ui,"Segoe UI",Arial,sans-serif}
+.wrap{width:min(100% - 2rem,72rem);margin-inline:auto}
+header.hero{background:var(--ink);color:#fff;padding:2.4rem 0 2rem}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#c9cfdb;font-weight:700;margin:0}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(1.9rem,4.4vw,2.8rem);line-height:1.12;margin:.5rem 0 .6rem}
+.hero p{max-width:70ch;color:#dde2ea;margin:0}
+.hero a{color:#fff}
+section{background:var(--paper);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.2rem 0;overflow-x:auto}
+h2{font-size:1.3rem;margin:0 0 .4rem}
+.lead{color:var(--muted);margin:0 0 1rem;max-width:80ch}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:52rem}
+th,td{padding:.6rem .7rem;vertical-align:top;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+thead th{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.swim th.phase{width:27%}
+.swim th.phase.crawl{color:var(--crawl-ink)}.swim th.phase.walk{color:var(--walk-ink)}.swim th.phase.run{color:var(--run-ink)}
+.swim td.name{font-weight:700;width:19%}
+.card{border-radius:.6rem;padding:.6rem .7rem}
+.crawl .card,.card.crawl{background:var(--crawl)}.card.walk{background:var(--walk)}.card.run{background:var(--run)}
+.q{display:inline-block;font-weight:800;font-size:.78rem;letter-spacing:.03em;margin-bottom:.25rem}
+.card.crawl .q{color:var(--crawl-ink)}.card.walk .q{color:var(--walk-ink)}.card.run .q{color:var(--run-ink)}
+.card p{margin:.2rem 0 0}
+.lbl{font-weight:700}
+.dep{font-size:.86rem;color:var(--muted);margin-top:.35rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;background:#fff6d8;border-radius:.3rem;padding:0 .3rem;margin-left:.2rem;white-space:nowrap}
+.tag.src{background:#e9eef6}
+.arrow td:first-child{font-weight:700;white-space:nowrap}
+.arrow .to{color:var(--accent)}
+.rationale{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1rem}
+.rationale article{border-radius:.7rem;padding:1rem}
+.rationale h3{margin:0 0 .4rem;font-size:1.02rem}
+.rationale p{margin:0;font-size:.93rem}
+.legend{font-size:.85rem;color:var(--muted);margin:.8rem 0 0}
+ol.sources{margin:0;padding-left:1.2rem;font-size:.9rem}
+ol.sources li{margin:.3rem 0}
+footer{color:var(--muted);font-size:.88rem;padding:1rem 0 2.5rem}
+footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">ISM 6346 · Group 3 · <a href="index.html">About Us</a> · Roadmap · <a href="raci.html">RACI</a> · <a href="dashboard.html">Dashboard</a></p>
+    <h1>DBS Bank: Crawl/Walk/Run Transformation Roadmap</h1>
+    <p>Eight DBS initiatives from 2014–2019, sequenced by dependency rather than by the order DBS actually launched them. Timing is in relative quarters from the start of the program; DBS's actual dates appear in a separate table for comparison.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="swim-h">
+    <h2 id="swim-h">Roadmap</h2>
+    <p class="lead">Each row is an initiative and each column a phase. Quarters are relative: Y1 Q1 is the first quarter of the program.</p>
+    <table class="swim">
+      <thead><tr><th>Initiative</th><th class="phase crawl">Crawl · Foundation</th><th class="phase walk">Walk · Deployment</th><th class="phase run">Run · Scale</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Technology Insourcing</td>
+          <td><div class="card crawl"><span class="q">Y1 Q1 – Y1 Q2</span><p><span class="lbl">Creates:</span> an in-house engineering team that can build and change systems without vendor backlogs.</p></div></td><td></td><td></td></tr>
+        <tr><td class="name">Cloud-native Infrastructure</td>
+          <td><div class="card crawl"><span class="q">Y1 Q1 – Y1 Q2</span><p><span class="lbl">Creates:</span> scalable infrastructure built for APIs and much faster releases.</p></div></td><td></td><td></td></tr>
+        <tr><td class="name">ADA Data Platform</td>
+          <td><div class="card crawl"><span class="q">Y1 Q1 – Y1 Q2</span><p><span class="lbl">Creates:</span> a governed, single source of truth for data, so experiments can be measured.</p><p class="dep">Design and governance run in parallel with the cloud build.</p></div></td><td></td><td></td></tr>
+        <tr><td class="name">Customer Journey Thinking</td><td></td>
+          <td><div class="card walk"><span class="q">Y1 Q3 – Y1 Q4</span><p><span class="lbl">Scope:</span> one unit, Retail Lending <span class="tag">proposed pilot</span></p><p><span class="lbl">Readiness outcome:</span> "Time to Yes" for loan applications cut from 30 days to 24 hours <span class="tag">team-set target</span></p><p class="dep">Depends on: ADA Data Platform</p></div></td><td></td></tr>
+        <tr><td class="name">digibank India</td><td></td>
+          <td><div class="card walk"><span class="q">Y1 Q3 – Y2 Q2</span><p><span class="lbl">Scope:</span> one market, India</p><p><span class="lbl">Readiness outcome:</span> 1 million customers within 12 months of launch <span class="tag src">DBS reported this, June 2017</span></p><p class="dep">Depends on: Technology Insourcing, Cloud-native Infrastructure</p></div></td><td></td></tr>
+        <tr><td class="name">API Developer Platform</td><td></td>
+          <td><div class="card walk"><span class="q">Y2 Q1 – Y2 Q2</span><p><span class="lbl">Scope:</span> one market, Singapore</p><p><span class="lbl">Readiness outcome:</span> 50+ active partners within the first year <span class="tag src">50+ reported at launch, Nov 2017</span></p><p class="dep">Depends on: Cloud-native Infrastructure</p></div></td><td></td></tr>
+        <tr><td class="name">Platform Operating Model</td><td></td><td></td>
+          <td><div class="card run"><span class="q">Y2 Q3 – Y3 Q4</span><p><span class="lbl">Scope:</span> bank-wide, 33 platforms</p><p><span class="lbl">Org change:</span> "two-in-a-box" co-leadership, with business and technology heads sharing platform KPIs and a joint execution roadmap <span class="tag src">DBS AR 2018</span></p><p class="dep">Scales: Customer Journey Thinking, API Developer Platform</p></div></td></tr>
+        <tr><td class="name">digibank Indonesia</td><td></td><td></td>
+          <td><div class="card run"><span class="q">Y4 Q1 – Y6 Q4</span><p><span class="lbl">Scope:</span> a second, larger market, using a repeatable regional launch model</p><p><span class="lbl">Org change:</span> a dedicated regional digital-bank team, with India-based digital experts rotated into the launch team <span class="tag">proposed</span></p><p class="dep">Scales: digibank India</p></div></td></tr>
+      </tbody>
+    </table>
+    <p class="legend"><span class="tag">yellow</span> marks a target or design choice set by our team. <span class="tag src">blue</span> marks a figure DBS reported. Every other fact is cited in the Sources section below.</p>
+  </section>
+
+  <section aria-labelledby="dep-h">
+    <h2 id="dep-h">Dependency annotations</h2>
+    <p class="lead">Each arrow names both endpoints and the capability that flows between them. Remove any Crawl initiative and at least one Walk initiative below becomes impossible.</p>
+    <table class="arrow">
+      <thead><tr><th>From → To</th><th>Enables</th></tr></thead>
+      <tbody>
+        <tr><td>Technology Insourcing → <span class="to">digibank India</span></td><td>The internal capability to iterate on the mobile app without vendor backlogs.</td></tr>
+        <tr><td>Cloud-native Infrastructure → <span class="to">digibank India</span></td><td>The fast release cadence (a 10x target) needed for rapid feature updates.</td></tr>
+        <tr><td>Cloud-native Infrastructure → <span class="to">API Developer Platform</span></td><td>Secure, scalable exposure of bank services to external partners.</td></tr>
+        <tr><td>ADA Data Platform → <span class="to">Customer Journey Thinking</span></td><td>Measurement of journey experiments, such as drop-off rates in the loan application process.</td></tr>
+        <tr><td>Customer Journey Thinking → <span class="to">Platform Operating Model</span></td><td>Clear, journey-based product ownership that the "two-in-a-box" structure is built around.</td></tr>
+        <tr><td>API Developer Platform → <span class="to">Platform Operating Model</span></td><td>Platform teams that own and govern their own partner-facing APIs.</td></tr>
+        <tr><td>digibank India → <span class="to">digibank Indonesia</span></td><td>A repeatable regional launch model, reusing the technology stack and biometric KYC logic.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="why-h">
+    <h2 id="why-h">Phase rationale</h2>
+    <div class="rationale">
+      <article class="card crawl"><h3>Crawl: Foundation (Y1 Q1 – Y1 Q2)</h3>
+        <p>These initiatives establish the "tech stack" and "talent stack" required for all subsequent scaling. We purposefully resequenced the ADA Data Platform to start alongside Cloud-native Infrastructure; while ADA is built on the cloud, their design and governance phases are independent workstreams that can run in parallel. By insourcing talent simultaneously, we ensure that the infrastructure being built is supported by an internal team capable of maintaining it. This foundational phase is essential because without these core capabilities, the bank would remain locked in a cycle of vendor dependency, preventing the agility required for mobile-first deployments.</p></article>
+      <article class="card walk"><h3>Walk: Deployment (Y1 Q3 – Y2 Q2)</h3>
+        <p>These initiatives deploy foundational capabilities in limited contexts to prove efficacy. Customer Journey Thinking is piloted in one unit, Retail Lending, using design thinking to shorten loan approval times. digibank India serves as the primary production test case, proving that the insourced team can deliver a mobile-only bank. The API Developer Platform tests our ability to expose services to the Singapore ecosystem. Proving that data-backed experiments and mobile-only banking work in one unit and one market justifies the cost of scaling them across the enterprise.</p></article>
+      <article class="card run"><h3>Run: Scale (Y2 Q3 – Y6 Q4)</h3>
+        <p>These initiatives scale the bank's digital model across the bank and into new markets. The Platform Operating Model moves the bank to "two-in-a-box" co-leadership, where business and technology heads share platform KPIs. It requires the maturity of the Walk phase, because it assumes the bank has mastered cloud-native agility. digibank Indonesia scales the India model into a larger, more complex market through a dedicated regional digital-bank team. This phase embeds digital-native behavior into the bank's culture, so the technology transformation is sustained by a permanent shift in organizational incentives.</p></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="actual-h">
+    <h2 id="actual-h">Our sequence vs. DBS's actual timeline</h2>
+    <p class="lead">DBS did not launch these in dependency order. The comparison shows where our roadmap deliberately differs.</p>
+    <table>
+      <thead><tr><th>Initiative</th><th>Our phase and quarters</th><th>DBS actual</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Technology Insourcing</td><td>Crawl · Y1 Q1–Q2</td><td>2014–2019: from 85% outsourced to 90% insourced</td><td>[1]</td></tr>
+        <tr><td>Cloud-native Infrastructure</td><td>Crawl · Y1 Q1–Q2</td><td>Program from 2014; "cloud native" listed as a target for 2018</td><td>[2]</td></tr>
+        <tr><td>ADA Data Platform</td><td>Crawl · Y1 Q1–Q2</td><td>Launch date not found in public sources (gap noted)</td><td>[3]</td></tr>
+        <tr><td>Customer Journey Thinking</td><td>Walk · Y1 Q3–Q4</td><td>From 2015; over 300 journeys by 2016</td><td>[4]</td></tr>
+        <tr><td>digibank India</td><td>Walk · Y1 Q3 – Y2 Q2</td><td>Launched April 2016</td><td>[5]</td></tr>
+        <tr><td>API Developer Platform</td><td>Walk · Y2 Q1–Q2</td><td>Launched November 2017</td><td>[6]</td></tr>
+        <tr><td>Platform Operating Model</td><td>Run · Y2 Q3 – Y3 Q4</td><td>Established 2018</td><td>[7]</td></tr>
+        <tr><td>digibank Indonesia</td><td>Run · Y4 Q1 – Y6 Q4</td><td>Soft launch November 2016; official launch August 2017</td><td>[8]</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="src-h">
+    <h2 id="src-h">Sources</h2>
+    <ol class="sources">
+      <li><a href="https://dbs.com/annualreports/2019/cio-statement.html">DBS Annual Report 2019, CIO statement</a></li>
+      <li><a href="https://www.slideshare.net/slideshow/executingthedigitalstrategy/89754664">D. Gledhill, "Executing the digital strategy," DBS, Feb 2018</a></li>
+      <li><a href="https://www.forrester.com/blogs/dbs-bank-followed-four-design-principles-when-building-their-enterprise-data-platform">Forrester, "DBS Bank Followed Four Design Principles When Building Its Enterprise Data Platform"</a></li>
+      <li><a href="https://www.dbs.com/annualreports/2016/English/Letter-from-Chairman-and-CEO.html">DBS Annual Report 2016, Letter from the Chairman and CEO</a></li>
+      <li><a href="https://dbs.com/newsroom/DBS_launches_Indias_first_mobile_only_bank_heralds_WhatsApp_moment_in_banking">DBS newsroom, 26 Apr 2016</a>; <a href="https://dbs.com/media/digital-bank/banking-without-branches-dbs-digibank-india-gains-1m-customers-in-a-year.page">DBS, "digibank India gains 1m customers in a year," 8 Jun 2017</a></li>
+      <li><a href="https://www.dbs.com/newsroom/Reimagining_banking_DBS_launches_worlds_largest_banking_API_developer_platform">DBS newsroom, 2 Nov 2017</a></li>
+      <li><a href="https://www.dbs.com/annualreports/2018/cio-statement.html">DBS Annual Report 2018, CIO statement</a></li>
+      <li><a href="https://dbs.com/newsroom/DBS_launches_digibank_an_entire_bank_in_the_phone_in_Indonesia">DBS newsroom, 29 Aug 2017</a>; <a href="https://www.dbs.com/annualreports/2016/english/pdf/Consumer_Banking-Wealth_Management.pdf">DBS Annual Report 2016, Consumer Banking</a></li>
+    </ol>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Roadmap Sequencer: Sarah Swift · <a href="index.html">Back to About Us</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DBS Transformation Roadmap · About Us</title>
+<style>
+:root{--ink:#1d2330;--muted:#596273;--line:#dfe3ea;--page:#f6f7f9;--paper:#fff;--accent:#7a1f2b;--accent-soft:#f6e9eb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:1rem/1.6 system-ui,"Segoe UI",Arial,sans-serif}
+.wrap{width:min(100% - 2rem,60rem);margin-inline:auto}
+header.hero{background:var(--ink);color:#fff;padding:3.2rem 0 2.6rem}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#c9cfdb;font-weight:700;margin:0}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.1;margin:.6rem 0 .8rem}
+.hero p:last-child{max-width:60ch;color:#dde2ea;margin:0}
+nav.pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.8rem;margin:-1.4rem auto 0;position:relative}
+nav.pages a{display:block;background:var(--paper);border:1px solid var(--line);border-radius:.8rem;padding:1rem 1.1rem;text-decoration:none;color:var(--ink);box-shadow:0 6px 18px rgba(20,25,40,.06)}
+nav.pages a:hover{border-color:var(--accent)}
+nav.pages strong{display:block;color:var(--accent)}
+nav.pages span{font-size:.9rem;color:var(--muted)}
+main section{background:var(--paper);border:1px solid var(--line);border-radius:.9rem;padding:1.6rem;margin:1.2rem 0}
+h2{font-size:1.35rem;margin:0 0 .8rem}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.member{border:1px solid var(--line);border-radius:.7rem;padding:1rem}
+.avatar{width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:1.25rem;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.member h3{margin:.7rem 0 0;font-size:1.05rem}
+.role{color:var(--accent);font-weight:700;font-size:.88rem;margin:0 0 .4rem}
+.member p{margin:.3rem 0 0;font-size:.95rem}
+ul.benefits{padding-left:1.2rem;margin:0}
+ul.benefits li{margin:.45rem 0}
+.todo{background:#fff6d8;border-radius:.3rem;padding:0 .25rem}
+footer{color:var(--muted);font-size:.88rem;padding:1.5rem 0 2.5rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">ISM 6346 · Group 3 · Week 6</p>
+    <h1>DBS Bank: Transformation Roadmap</h1>
+    <p>A Crawl/Walk/Run roadmap, governance RACI and quarterly review dashboard built from DBS Bank's publicly reported 2014–2019 digital transformation.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="pages" aria-label="Project pages">
+    <a href="roadmap.html"><strong>Roadmap</strong><span>Crawl/Walk/Run sequence with dependency logic</span></a>
+    <a href="raci.html"><strong>Governance RACI</strong><span>Who owns the recurring decisions</span></a>
+    <a href="dashboard.html"><strong>QBR Dashboard</strong><span>Is the transformation on track, and why</span></a>
+  </nav>
+
+  <main>
+    <section aria-labelledby="team-h">
+      <h2 id="team-h">The team</h2>
+      <div class="team">
+        <article class="member">
+          <div class="avatar"><img src="images/sarah.jpg" alt="Portrait of Sarah Swift"></div>
+          <h3>Sarah Swift</h3>
+          <p class="role">Roadmap Sequencer and Site Editor</p>
+          <p>Sarah has more than 15 years in business analysis, data governance and process improvement, including data risk and business architecture roles in banking. She is pursuing an MS in AI in Business and Digital Transformation at USF. She owned the case selection, the Crawl/Walk/Run roadmap and this site.</p>
+        </article>
+        <article class="member">
+          <div class="avatar"><img src="images/dipendra.jpg" alt="Portrait of Dipendra Paudel"></div>
+          <h3>Dipendra Paudel</h3>
+          <p class="role">Governance Designer</p>
+          <p>Dipendra has 15+ years of experience in data integrity, analytics and information security, including data integrity officer and coordinator roles with the United Nations (non-profit) based in Kathmandu, Moscow, Kyiv, Warsaw and currently in DC. His work includes leading data analytics and pipeline management teams, building dashboards and reporting tools, developing business continuity and data retention policies, and supporting NIST 800-53 compliance. He is pursuing an MS in Artificial Intelligence and Business Intelligence at the University of South Florida and owned the governance RACI.</p>
+        </article>
+        <article class="member">
+          <div class="avatar"><img src="images/derek.jpg" alt="Portrait of Derek Furman"></div>
+          <h3>Derek Furman</h3>
+          <p class="role">Dashboard Designer</p>
+          <p>Derek is an Army veteran with a background in government contracting and is completing his master's degree in AI and Business Analytics at the University of South Florida. He is also the founder of Apex Shift AI Consulting, where he focuses on helping businesses improve operations through AI, digital transformation, and strategic planning. He owned the QBR dashboard.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="audience-h">
+      <h2 id="audience-h">Who this is for</h2>
+      <p>The Chief Transformation Officer of a U.S. regional bank with roughly $20–50 billion in assets, who has been asked to present a three-year digital plan to the board and wants to use DBS, one of the most documented bank transformations, as a benchmark for what to build first and how to govern it.</p>
+    </section>
+
+    <section aria-labelledby="benefits-h">
+      <h2 id="benefits-h">What it lets you do</h2>
+      <ul class="benefits">
+        <li><strong>Roadmap:</strong> see what slips if a foundation slips. The dependency table shows that a delay in Cloud-native Infrastructure moves both digibank India and the API Developer Platform, so you know which launch dates to warn the board about first.</li>
+        <li><strong>RACI:</strong> know who breaks a tie before the conflict starts. When a platform's business and technology co-leads disagree, one row names a single Accountable owner, and another names who decides when a digibank market can proceed to the next one.</li>
+        <li><strong>Dashboard:</strong> find the one red signal in ten minutes. The quarterly view puts the off-track loan approval time next to the decision it requires and the person Accountable for making it.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="novelty-h">
+      <h2 id="novelty-h">What we added</h2>
+      <p>Our roadmap follows dependencies, not DBS's calendar. We placed the ADA Data Platform in Crawl even though DBS has published no launch date for it, and the comparison table on the roadmap page shows every place where our order differs from what DBS actually did. Two of us have spent our careers in data governance and data integrity, so we treated data as a foundation rather than a later add-on, and the RACI gives data quality and access policy a single Accountable owner, the Chief Data Officer. Every figure on the roadmap is tagged as either DBS-reported or a team-set target, so a reader can tell evidence from assumption. The RACI adds two decisions specific to DBS: when a digibank market proceeds to the next one, and who settles disputes between a platform's business and technology co-leads. On the dashboard, we measure the Platform Operating Model by whether co-leads jointly reviewed their KPIs, not by how many platforms exist, and we publish the exact rules that turn each metric amber or red.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Sources are cited on each page. Case facts come from DBS annual reports, DBS Investor Day 2017, DBS newsroom releases and the MIT CISR case on DBS.</p>
+  </footer>
+</div>
+</body>
+</html>

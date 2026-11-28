@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DBS Bank Transformation | Quarterly Business Review</title>
+<style>
+  :root {
+    --ink: #1d2330; --muted: #505b6c; --line: #dfe3ea;
+    --page: #f6f7f9; --paper: #fff; --accent: #7a1f2b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); background: var(--page); font: 1rem/1.4 system-ui, "Segoe UI", sans-serif; }
+  .wrap { width: min(100% - 2rem, 71rem); margin-inline: auto; }
+  .hero { color: white; background: var(--ink); border-bottom: 4px solid var(--accent); padding: 1rem 0 1.2rem; }
+  nav { display: flex; flex-wrap: wrap; gap: .4rem 1rem; font-size: .84rem; }
+  nav a { color: #e5eaf1; text-underline-offset: .22em; }
+  nav a[aria-current] { color: white; font-weight: 750; }
+  a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  h1 { margin: .55rem 0 .2rem; font: 500 clamp(2rem, 5vw, 3rem)/1.1 Georgia, serif; }
+  h2, h3, p { margin: 0; }
+  .subtitle { color: #e5eaf1; font-size: .9rem; }
+  main { display: grid; gap: .8rem; padding-block: .85rem 1.2rem; }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: .65rem; padding: .65rem .85rem; }
+  .health { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem .9rem; border-inline-start: 4px solid #a36a12; }
+  .panel h2 { font-size: .98rem; }
+  .health p, .decisions li { font-size: .87rem; }
+  .decisions ol { margin: .15rem 0 0; padding-inline-start: 1.2rem; }
+  .phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
+  .crawl { --phase-bg: #e7eef8; --phase-ink: #1f4a7a; }
+  .walk { --phase-bg: #e8f3ec; --phase-ink: #1f6a43; }
+  .run { --phase-bg: #f7ece6; --phase-ink: #8a3d12; }
+  .phase { display: grid; align-content: start; gap: .45rem; padding: .55rem; border-radius: .7rem; background: var(--phase-bg); }
+  .phase h2 { color: var(--phase-ink); display: flex; gap: .5rem; align-items: baseline; font-size: 1.25rem; padding-inline: .2rem; }
+  .phase h2 span { font-size: .79rem; font-weight: 650; }
+  .card { background: var(--paper); border: 1px solid #d5dce5; border-radius: .48rem; padding: .48rem .62rem; }
+  .initiative { color: var(--phase-ink); font-size: .72rem; font-weight: 700; }
+  .card h3 { font-size: 1rem; margin-top: .06rem; }
+  .measure { display: flex; flex-wrap: wrap; align-items: baseline; gap: .12rem .42rem; margin: .15rem 0; font-variant-numeric: tabular-nums; }
+  .measure strong { font-size: 1.45rem; line-height: 1.18; white-space: nowrap; }
+  .measure span, .definition { color: var(--muted); font-size: .77rem; }
+  .meta { display: flex; align-items: baseline; gap: .4rem; margin-bottom: .16rem; font-size: .73rem; font-weight: 650; }
+  .status { display: inline-block; padding: .06em .45em; border-radius: .3rem; white-space: nowrap; }
+  .on { background: #e4f3e9; color: #135437; }
+  .risk { background: #fff0ce; color: #754900; }
+  .off { background: #fbe8e8; color: #871d29; }
+  .notes { display: grid; grid-template-columns: 1fr 1.25fr; gap: .85rem; font-size: .76rem; color: var(--muted); }
+  .notes h2 { color: var(--ink); margin-bottom: .18rem; }
+  .notes p + p { margin-top: .2rem; }
+  .notes a { color: var(--accent); text-underline-offset: .15em; }
+  @media screen and (max-width: 47rem) {
+    .phases, .notes { grid-template-columns: 1fr; }
+  }
+  @page { size: landscape; margin: 8mm; }
+  @media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html { font-size: 10pt; }
+    body { line-height: 1.25; }
+    .wrap { width: 100%; }
+    nav { display: none; }
+    .hero { padding: .45rem .75rem; border-bottom-width: 2px; }
+    h1 { margin-top: 0; font-size: 22pt; }
+    main { display: block; padding-block: .4rem 0; }
+    main > * + * { margin-top: .4rem; }
+    .phases { gap: .45rem; }
+    .phase { gap: .3rem; padding: .4rem; }
+    .card { padding: .28rem .45rem; }
+    .measure { margin-block: .1rem; }
+    .measure strong { font-size: 1.35rem; }
+    .panel { padding-block: .3rem; }
+    .notes { gap: .6rem; font-size: 8pt; }
+    .notes p + p { margin-top: .15rem; }
+    .card, .panel { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav aria-label="Group 3 pages">
+      <a href="index.html">About Us</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="raci.html">RACI</a>
+      <a href="dashboard.html" aria-current="page">Dashboard</a>
+    </nav>
+    <h1>DBS Bank Transformation QBR</h1>
+    <p class="subtitle">Reporting quarter: Y4 Q2 · Illustrative scenario · ISM 6346 Group 3</p>
+  </div>
+</header>
+<main class="wrap">
+  <section class="panel health" aria-labelledby="health">
+    <h2 id="health">Transformation health</h2>
+    <strong class="status risk">Amber</strong>
+    <p>Median retail loan approval time is off track at 30 hours against a 24-hour target, and four other KPIs are at risk.</p>
+  </section>
+  <div class="phases">
+    <section class="phase crawl" aria-labelledby="crawl">
+      <h2 id="crawl">Crawl <span>Foundation</span></h2>
+      <article class="card">
+        <p class="initiative">Technology Insourcing · Y1 Q1–Q2</p>
+        <h3>Technology insourcing rate</h3>
+        <p class="measure"><strong>82%</strong> <span>Target: 80%</span></p>
+        <p class="meta"><span>Leading</span> <strong class="status on">On track</strong></p>
+        <p class="definition">Share of technology staff employed in-house.</p>
+      </article>
+      <article class="card">
+        <p class="initiative">Cloud-native Infrastructure · Y1 Q1–Q2</p>
+        <h3>Cloud readiness</h3>
+        <p class="measure"><strong>72%</strong> <span>Target: 80%</span></p>
+        <p class="meta"><span>Leading</span> <strong class="status risk">At risk</strong></p>
+        <p class="definition">Share of priority workloads that pass deployment, recovery, and security checks.</p>
+      </article>
+      <article class="card">
+        <p class="initiative">ADA Data Platform · Y1 Q1–Q2</p>
+        <h3>Governed data readiness</h3>
+        <p class="measure"><strong>78%</strong> <span>Target: 85%</span></p>
+        <p class="meta"><span>Leading</span> <strong class="status risk">At risk</strong></p>
+        <p class="definition">Share of priority datasets that meet ownership, lineage, and data quality requirements.</p>
+      </article>
+    </section>
+    <section class="phase walk" aria-labelledby="walk">
+      <h2 id="walk">Walk <span>Deployment</span></h2>
+      <article class="card">
+        <p class="initiative">Customer Journey Thinking · Y1 Q3–Q4</p>
+        <h3>Retail loan approval time</h3>
+        <p class="measure"><strong>30 hours</strong> <span>Team target: 24 hours</span></p>
+        <p class="meta"><span>Lagging</span> <strong class="status off">Off track</strong></p>
+        <p class="definition">Median time from submission of a complete application to approval in the retail lending pilot.</p>
+      </article>
+      <article class="card">
+        <p class="initiative">digibank India · Y1 Q3–Y2 Q2</p>
+        <h3>New digital customers</h3>
+        <p class="measure"><strong>260,000</strong> <span>Target: 250,000 customers</span></p>
+        <p class="meta"><span>Lagging</span> <strong class="status on">On track</strong></p>
+        <p class="definition">Number of customers who joined digibank India during the quarter.</p>
+      </article>
+      <article class="card">
+        <p class="initiative">API Developer Platform · Y2 Q1–Q2</p>
+        <h3>Active API partners</h3>
+        <p class="measure"><strong>46 partners</strong> <span>Target: 50 partners</span></p>
+        <p class="meta"><span>Lagging</span> <strong class="status risk">At risk</strong></p>
+        <p class="definition">Number of Singapore partners that made at least one successful production API call during the quarter.</p>
+      </article>
+    </section>
+    <section class="phase run" aria-labelledby="run">
+      <h2 id="run">Run <span>Scale</span></h2>
+      <article class="card">
+        <p class="initiative">Platform Operating Model · Y2 Q3–Y3 Q4</p>
+        <h3>Platform model adoption</h3>
+        <p class="measure"><strong>82%</strong> <span>Target: 80%</span></p>
+        <p class="meta"><span>Change health</span> <strong class="status on">On track</strong></p>
+        <p class="definition">Share of in-scope platforms whose business and technology leads jointly reviewed KPIs and updated their roadmap this quarter.</p>
+      </article>
+      <article class="card">
+        <p class="initiative">digibank Indonesia · Y4 Q1–Y6 Q4</p>
+        <h3>Active digital customer growth</h3>
+        <p class="measure"><strong>9%</strong> <span>Target: 10%</span></p>
+        <p class="meta"><span>Lagging</span> <strong class="status risk">At risk</strong></p>
+        <p class="definition">Growth from Y4 Q1 to Y4 Q2 in active customers, measured over each quarter’s final 30 days.</p>
+      </article>
+    </section>
+  </div>
+  <section class="panel decisions" aria-labelledby="decisions">
+    <h2 id="decisions">Decisions required this quarter</h2>
+    <ol>
+      <li><strong>Initiative prioritization.</strong> Decide whether to assign more engineers to the retail lending pilot to bring median approval time down to 24 hours. <strong>Accountable: Group CEO.</strong></li>
+      <li><strong>Data governance.</strong> Governed data readiness is 78% against an 85% target. Decide whether to require priority lending datasets to meet ADA governance requirements before expanding the pilot. <strong>Accountable: Chief Data Officer.</strong></li>
+    </ol>
+  </section>
+  <footer class="panel notes">
+    <section aria-labelledby="scoring">
+      <h2 id="scoring">Status rules and data basis</h2>
+      <p>A KPI is <strong>On track</strong> if it meets or beats its target, <strong>At risk</strong> if it misses by up to 10% of the target, and <strong>Off track</strong> if it misses by more than 10%. Lower values are better for loan approval time.</p>
+      <p>Overall health is <strong>Green</strong> if all KPIs are on track, <strong>Red</strong> if two or more are off track, and <strong>Amber</strong> otherwise.</p>
+      <p>Y4 Q2 means Year 4, Quarter 2 of the proposed roadmap. This review includes earlier initiatives. All current values and seven targets are illustrative. The 24-hour loan target comes from the <a href="roadmap.html">team roadmap</a>.</p>
+    </section>
+    <section aria-labelledby="sources">
+      <h2 id="sources">DBS-reported historical context</h2>
+      <p>DBS shifted from 85% outsourced technology staffing in 2014 to 90% in-house in 2019 (<a href="https://www.dbs.com/annualreports/2019/files/media/dbs-annual-report-2019.pdf">2019 annual report</a>). It established 33 platforms in 2018 (<a href="https://www.dbs.com/annualreports/2018/downloads/dbs-annual-report-2018.pdf">2018 annual report</a>).</p>
+      <p>DBS reported more than 300 customer journeys underway (<a href="https://www.dbs.com/annualreports/2016/English/Letter-from-Chairman-and-CEO.html">2016 annual report</a>). In its first year, digibank India reached 1 million customers (<a href="https://www.dbs.com/iwov-resources/images/investors/quarterly-financials/2017/DBS_1Q17_media_briefing.pdf">May 2017 briefing</a>). More than 50 companies had joined the API platform at its <a href="https://www.dbs.com/NewsPrinter.page?locale=en&amp;newsId=jy1w6176">November 2017 launch</a>.</p>
+      <p>DBS officially launched digibank Indonesia in <a href="https://www.dbs.com/newsroom/DBS_launches_digibank_an_entire_bank_in_the_phone_in_Indonesia">August 2017</a>. The proposed roadmap places it in Run.</p>
+    </section>
+  </footer>
+</main>
+</body>
+</html>

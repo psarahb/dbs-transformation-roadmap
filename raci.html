@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DBS Governance RACI · Transformation Decisions</title>
+<style>
+:root{--ink:#1d2330;--muted:#596273;--line:#dfe3ea;--page:#f6f7f9;--paper:#fff;--accent:#7a1f2b;
+--crawl:#e7eef8;--crawl-ink:#1f4a7a;--walk:#e8f3ec;--walk-ink:#1f6a43;--run:#f7ece6;--run-ink:#8a3d12}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:1rem/1.55 system-ui,"Segoe UI",Arial,sans-serif}
+.wrap{width:min(100% - 2rem,72rem);margin-inline:auto}
+header.hero{background:var(--ink);color:#fff;padding:2.4rem 0 2rem}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#c9cfdb;font-weight:700;margin:0}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(1.9rem,4.4vw,2.8rem);line-height:1.12;margin:.5rem 0 .6rem}
+.hero p{max-width:70ch;color:#dde2ea;margin:0}
+.hero a{color:#fff}
+section{background:var(--paper);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;margin:1.2rem 0;overflow-x:auto}
+h2{font-size:1.3rem;margin:0 0 .4rem}
+.lead{color:var(--muted);margin:0 0 1rem;max-width:80ch}
+table{border-collapse:separate;border-spacing:0;width:100%}
+th,td{padding:.6rem .7rem;vertical-align:top;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+thead th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.raci{min-width:60rem}
+.raci td.dec{font-weight:700;width:20%}
+.raci td.dec small{display:block;font-weight:400;color:var(--muted);margin-top:.15rem}
+.raci th.r,.raci td.r{text-align:center;width:7.5%}
+.b{display:inline-block;min-width:1.7rem;border-radius:.35rem;font-weight:800;padding:.05rem .3rem;background:#eef0f4;color:var(--muted)}
+.b.A{background:var(--accent);color:#fff}
+.b.R{background:var(--crawl);color:var(--crawl-ink)}
+.b.C{background:#fff6d8;color:#7a5a00}
+.b.I{background:#eef0f4;color:var(--muted)}
+.b.n{background:none;color:#b5bbc7;font-weight:400}
+.legend{font-size:.88rem;color:var(--muted);margin:.8rem 0 0}
+.detail{display:grid;gap:1rem}
+.detail article{border:1px solid var(--line);border-radius:.7rem;padding:1rem}
+.detail h3{margin:0 0 .5rem;font-size:1.02rem}
+.detail dl{margin:0;display:grid;grid-template-columns:11rem 1fr;gap:.35rem .8rem;font-size:.93rem}
+.detail dt{font-weight:700;color:var(--muted)}
+.detail dd{margin:0}
+.pill{display:inline-block;font-size:.76rem;font-weight:800;border-radius:.3rem;padding:0 .35rem;margin-right:.25rem;white-space:nowrap}
+.pill.crawl{background:var(--crawl);color:var(--crawl-ink)}.pill.walk{background:var(--walk);color:var(--walk-ink)}.pill.run{background:var(--run);color:var(--run-ink)}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;background:#fff6d8;border-radius:.3rem;padding:0 .3rem;margin-left:.2rem;white-space:nowrap}
+.tag.src{background:#e9eef6}
+@media(max-width:40rem){.detail dl{grid-template-columns:1fr}}
+ul.notes{margin:0;padding-left:1.2rem;font-size:.93rem}
+ul.notes li{margin:.35rem 0}
+footer{color:var(--muted);font-size:.88rem;padding:1rem 0 2.5rem}
+footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">ISM 6346 · Group 3 · <a href="index.html">About Us</a> · <a href="roadmap.html">Roadmap</a> · RACI · <a href="dashboard.html">Dashboard</a></p>
+    <h1>DBS Bank: Governance RACI for Recurring Transformation Decisions</h1>
+    <p>Seven decisions that will come back again and again as the eight roadmap initiatives move from Crawl to Walk to Run. Each has exactly one Accountable role, and each is tied to a decision point on the roadmap.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="matrix-h">
+    <h2 id="matrix-h">RACI matrix</h2>
+    <p class="lead">Rows are decisions, not tasks. Columns are DBS-style executive roles. Every row has one A.</p>
+    <table class="raci">
+      <thead><tr>
+        <th>Decision</th>
+        <th class="r">Group CEO</th>
+        <th class="r">Group CFO</th>
+        <th class="r">Group Head, Technology &amp; Operations (CIO)</th>
+        <th class="r">Chief Data Officer</th>
+        <th class="r">Group Head, Consumer Banking</th>
+        <th class="r">Chief Risk Officer</th>
+        <th class="r">Platform co-leads (business + technology)</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="dec">1 · Budget allocation<small>Split of transformation funding across initiatives</small></td>
+          <td class="r"><span class="b C">C</span></td><td class="r"><span class="b A">A</span></td><td class="r"><span class="b R">R</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b R">R</span></td><td class="r"><span class="b I">I</span></td><td class="r"><span class="b I">I</span></td></tr>
+        <tr><td class="dec">2 · Architecture standards<small>Approving or overriding choices that affect the shared platform</small></td>
+          <td class="r"><span class="b I">I</span></td><td class="r"><span class="b I">I</span></td><td class="r"><span class="b A">A</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b R">R</span></td></tr>
+        <tr><td class="dec">3 · Data governance<small>Data quality and access policy across business units</small></td>
+          <td class="r"><span class="b I">I</span></td><td class="r"><span class="b I">I</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b A">A</span></td><td class="r"><span class="b R">R</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b R">R</span></td></tr>
+        <tr><td class="dec">4 · Initiative prioritization<small>What is built next when engineers and funds are constrained</small></td>
+          <td class="r"><span class="b A">A</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b R">R</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b R">R</span></td><td class="r"><span class="b I">I</span></td><td class="r"><span class="b C">C</span></td></tr>
+        <tr><td class="dec">5 · Vendor and partnership decisions<small>Build-versus-buy and which partners join the API platform</small></td>
+          <td class="r"><span class="b I">I</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b A">A</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b R">R</span></td></tr>
+        <tr><td class="dec">6 · Market launch gate<small>Case-specific: when a digibank market proceeds to the next one</small></td>
+          <td class="r"><span class="b C">C</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b I">I</span></td><td class="r"><span class="b A">A</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b R">R</span></td></tr>
+        <tr><td class="dec">7 · Co-leadership conflicts and shared KPIs<small>Case-specific: business P&amp;L versus enterprise platform roadmap</small></td>
+          <td class="r"><span class="b A">A</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b I">I</span></td><td class="r"><span class="b C">C</span></td><td class="r"><span class="b I">I</span></td><td class="r"><span class="b R">R</span></td></tr>
+      </tbody>
+    </table>
+    <p class="legend"><span class="b A">A</span> Accountable: one per row, owns the outcome and cannot delegate it. <span class="b R">R</span> Responsible: does the work. <span class="b C">C</span> Consulted: gives input <em>before</em> the decision. <span class="b I">I</span> Informed: told <em>after</em>, no input rights. Role assignments are our team's proposal; DBS does not publish a RACI.</p>
+  </section>
+
+  <section aria-labelledby="detail-h">
+    <h2 id="detail-h">Why each Accountable, and where it bites on the roadmap</h2>
+    <p class="lead">For each decision: the Accountable rationale, the roadmap decision point that creates it (initiative names match the <a href="roadmap.html">roadmap</a>), and what in the system would make it true when nobody is looking.</p>
+    <div class="detail">
+
+      <article>
+        <h3>1 · Budget allocation <span class="tag">A: Group CFO</span></h3>
+        <dl>
+          <dt>Decision</dt><dd>How transformation funding is divided across the eight initiatives, and when it is re-cut, for example funding Technology Insourcing and Cloud-native Infrastructure first while holding back money for digibank Indonesia until digibank India proves out.</dd>
+          <dt>Why this Accountable</dt><dd>The CFO controls capital allocation and is the one role that sees every business case against the bank's total return. A business head as owner would let one unit's P&amp;L tilt the split, and the CIO as owner would make the largest recipient the judge of its own budget.</dd>
+          <dt>Roadmap decision point</dt><dd><span class="pill crawl">Crawl</span>funding for Technology Insourcing, Cloud-native Infrastructure, ADA Data Platform · <span class="pill walk">Walk→Run</span>release of funds for Platform Operating Model and digibank Indonesia.</dd>
+          <dt>Enforcement (proposed)</dt><dd>Funds released in tranches, each only after a CFO-signed gate.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>2 · Architecture standards <span class="tag">A: Group Head, Technology &amp; Operations (CIO)</span></h3>
+        <dl>
+          <dt>Decision</dt><dd>Whether a team may depart from the target cloud-native, API-first architecture for speed or cost, and who approves exceptions that touch the shared platform.</dd>
+          <dt>Why this Accountable</dt><dd>The CIO owns the shared technology stack and answers for outages or lock-in if an exception goes wrong. Platform teams are Responsible for following and proposing standards, but should not approve their own exceptions.</dd>
+          <dt>Roadmap decision point</dt><dd><span class="pill crawl">Crawl</span>Cloud-native Infrastructure sets the standard · <span class="pill walk">Walk</span>digibank India and API Developer Platform each pressure it for faster releases.</dd>
+          <dt>Enforcement (proposed)</dt><dd>An exception must be logged and approved before a release can go to production.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>3 · Data governance <span class="tag">A: Chief Data Officer</span></h3>
+        <dl>
+          <dt>Decision</dt><dd>Who owns data quality and access policy on the ADA Data Platform when business units want faster or wider access than the rules allow.</dd>
+          <dt>Why this Accountable</dt><dd>ADA is meant to be one governed source of truth, which only holds if a single role owns the rules across every unit. The CDO sits above any one unit's incentives. The Chief Risk Officer is Consulted because access rules carry privacy and regulatory risk.</dd>
+          <dt>Roadmap decision point</dt><dd><span class="pill crawl">Crawl</span>ADA Data Platform (governance design) · <span class="pill walk">Walk</span>Customer Journey Thinking in Retail Lending needs trusted data to measure "Time to Yes."</dd>
+          <dt>Enforcement (proposed)</dt><dd>All data access requests go through one CDO-owned approval workflow.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>4 · Initiative prioritization <span class="tag">A: Group CEO</span></h3>
+        <dl>
+          <dt>Decision</dt><dd>When engineers and funds are limited, which initiative is built next and which is deferred, for example which Walk initiative gets scarce engineers first.</dd>
+          <dt>Why this Accountable</dt><dd>Prioritization trades one unit's needs against another's and against the enterprise architecture, so it has to sit above all of them. Only the CEO can make that call stick. The CIO and the Consumer Banking head are Responsible because they supply the capacity and the demand.</dd>
+          <dt>Roadmap decision point</dt><dd><span class="pill crawl">Crawl</span>→<span class="pill walk">Walk</span>gate: sequencing of Customer Journey Thinking, digibank India and API Developer Platform · <span class="pill walk">Walk</span>→<span class="pill run">Run</span>gate.</dd>
+          <dt>Enforcement (proposed)</dt><dd>One ranked backlog reviewed at every QBR; it can only be re-ordered by the CEO.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>5 · Vendor and partnership decisions <span class="tag">A: Group Head, Technology &amp; Operations (CIO)</span></h3>
+        <dl>
+          <dt>Decision</dt><dd>Which external vendors and partners are approved and governed, including when a vendor is still justified while capability is being insourced, and which partners may build on the API Developer Platform.</dd>
+          <dt>Why this Accountable</dt><dd>Vendors and API partners both touch the security and architecture of the shared platform, which the CIO is accountable for. Insourcing was a deliberate move away from vendor dependency, so one technology owner should decide when a vendor is the exception. The Chief Risk Officer is Consulted on third-party risk.</dd>
+          <dt>Roadmap decision point</dt><dd><span class="pill crawl">Crawl</span>Technology Insourcing (build versus buy) · <span class="pill walk">Walk</span>API Developer Platform (partner onboarding).</dd>
+          <dt>Enforcement (proposed)</dt><dd>No contract is signed and no partner is onboarded without a recorded CIO sign-off.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>6 · Market launch gate <span class="tag">A: Group Head, Consumer Banking</span> <span class="tag">case-specific</span></h3>
+        <dl>
+          <dt>Decision</dt><dd>When a digibank market launch proceeds to the next market, and how much investment is released for it.</dd>
+          <dt>Why this Accountable</dt><dd>The Consumer Banking head owns the customer business digibank serves and answers for whether a launch earned its place. The go decision rests on the Walk readiness outcome (digibank India's customer milestone), so the owner of that outcome should own the decision. The CFO and Chief Risk Officer are Consulted before it is made.</dd>
+          <dt>Roadmap decision point</dt><dd><span class="pill walk">Walk</span>digibank India readiness outcome → <span class="pill run">Run</span>digibank Indonesia.</dd>
+          <dt>Enforcement (proposed)</dt><dd>The next market cannot start until the readiness outcome is met and signed off by this role.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>7 · Co-leadership conflicts and shared KPIs <span class="tag">A: Group CEO</span> <span class="tag">case-specific</span></h3>
+        <dl>
+          <dt>Decision</dt><dd>When a platform's business and technology co-leads disagree, such as a business unit's near-term P&amp;L against the enterprise roadmap, who decides, and what the two are jointly measured on.</dd>
+          <dt>Why this Accountable</dt><dd>"Two-in-a-box" splits leadership by design, so neither co-lead can break a tie between their own function's interests. Only the CEO sits above both the business and technology lines. Co-leads are Responsible for agreeing jointly first and escalating only the trade-offs they cannot resolve.</dd>
+          <dt>Roadmap decision point</dt><dd><span class="pill run">Run</span>Platform Operating Model (shared platform KPIs and joint execution roadmap, per the roadmap's citation of DBS Annual Report 2018).</dd>
+          <dt>Enforcement (proposed)</dt><dd>Shared KPIs mean neither co-lead's scorecard improves by overriding the other. Unresolved items escalate to the CEO at the QBR.</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="req-h">
+    <h2 id="req-h">Coverage and handoffs</h2>
+    <ul class="notes">
+      <li><strong>Required decision types:</strong> budget (1), architecture (2), data governance (3), prioritization (4), vendors and partnerships (5), plus two case-specific decisions (6, 7).</li>
+      <li><strong>Concentration to watch:</strong> the CEO is Accountable for two rows and the CIO for two. We kept the CEO to the two decisions that cross business and technology lines; if the CEO becomes the default escalation for everything, the matrix has failed.</li>
+      <li><strong>For the dashboard's "Decisions Required This Quarter":</strong> take one to three rows from this table. Decision 4 (Crawl→Walk and Walk→Run gates), decision 6 (the India → Indonesia gate) and decision 7 (Platform Operating Model) are the ones the roadmap forces first.</li>
+      <li><span class="tag src">verification</span> Role titles are modeled on DBS's executive structure and must be checked against the DBS Annual Report leadership pages before submission. Where DBS uses a different title, we use DBS's. The public record does not show who actually held each decision at DBS, so these assignments are our design, not DBS's reported practice.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Governance Designer: Dipendra · <a href="index.html">Back to About Us</a></p>
+</footer>
+</body>
+</html>
